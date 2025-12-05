@@ -55,7 +55,7 @@ export function Exercise({ id, title, description, expectedAnswer, hint, onCompl
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
           placeholder="Digite sua resposta aqui..."
-          className="w-full p-3 rounded-lg border border-slate-300 text-sm font-mono bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          className="w-full p-3 rounded-lg border border-slate-300 text-sm font-mono bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
           rows={4}
           disabled={isCompleted}
         />
@@ -103,9 +103,9 @@ export function Exercise({ id, title, description, expectedAnswer, hint, onCompl
 
         {/* Expected answer */}
         {showAnswer && expectedAnswer && (
-          <div className="mt-3 p-3 bg-slate-100 border border-slate-200 rounded-lg">
+          <div className="mt-3 p-3 bg-white border border-slate-300 rounded-lg">
             <p className="text-xs text-slate-500 mb-2 font-medium">Resposta sugerida:</p>
-            <pre className="text-sm font-mono text-slate-800 whitespace-pre-wrap">{expectedAnswer}</pre>
+            <pre className="text-sm font-mono text-slate-900 whitespace-pre-wrap bg-slate-50 p-2 rounded">{expectedAnswer}</pre>
           </div>
         )}
 
