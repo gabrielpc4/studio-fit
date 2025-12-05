@@ -85,18 +85,18 @@ export default function ModulePage() {
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div>
-              <div className="flex items-center gap-2 text-sm text-slate-500 mb-1">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-1">
                 <Link href="/" className="hover:text-blue-600">Início</Link>
                 <span>/</span>
                 <span>{phase.shortTitle}</span>
               </div>
-              <h1 className="text-xl font-bold text-slate-800">{module.title}</h1>
+              <h1 className="text-lg sm:text-xl font-bold text-slate-800">{module.title}</h1>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               {isComplete ? (
                 <span className="flex items-center gap-1.5 text-sm text-green-600 font-medium">
                   <CheckCircle className="w-4 h-4" />
@@ -105,7 +105,7 @@ export default function ModulePage() {
               ) : (
                 <button
                   onClick={handleMarkComplete}
-                  className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+                  className="px-3 sm:px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
                 >
                   Marcar como Concluído
                 </button>
@@ -116,70 +116,70 @@ export default function ModulePage() {
       </header>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-6 py-8">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {renderContent()}
       </main>
 
       {/* Navigation */}
-      <nav className="max-w-4xl mx-auto px-6 pb-12">
-        <div className="flex items-center justify-between pt-8 border-t border-slate-200">
+      <nav className="max-w-4xl mx-auto px-4 sm:px-6 pb-12">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-6 sm:pt-8 border-t border-slate-200">
           {/* Previous */}
-          <div>
+          <div className="flex-1 sm:flex-initial">
             {prevModule ? (
               <Link
                 href={`/curso/${phaseSlug}/${prevModule.id}`}
-                className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-2 p-3 sm:p-0 rounded-lg sm:rounded-none bg-slate-100 sm:bg-transparent text-slate-600 hover:text-blue-600 hover:bg-slate-200 sm:hover:bg-transparent transition-colors"
               >
-                <ChevronLeft className="w-5 h-5" />
-                <div className="text-left">
+                <ChevronLeft className="w-5 h-5 flex-shrink-0" />
+                <div className="text-left min-w-0">
                   <span className="text-xs text-slate-400 block">Anterior</span>
-                  <span className="text-sm font-medium">{prevModule.title}</span>
+                  <span className="text-sm font-medium truncate block">{prevModule.title}</span>
                 </div>
               </Link>
             ) : prevPhase ? (
               <Link
                 href={`/curso/${prevPhase.slug}/${prevPhase.modules[prevPhase.modules.length - 1].id}`}
-                className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-2 p-3 sm:p-0 rounded-lg sm:rounded-none bg-slate-100 sm:bg-transparent text-slate-600 hover:text-blue-600 hover:bg-slate-200 sm:hover:bg-transparent transition-colors"
               >
-                <ChevronLeft className="w-5 h-5" />
-                <div className="text-left">
+                <ChevronLeft className="w-5 h-5 flex-shrink-0" />
+                <div className="text-left min-w-0">
                   <span className="text-xs text-slate-400 block">{prevPhase.shortTitle}</span>
-                  <span className="text-sm font-medium">
+                  <span className="text-sm font-medium truncate block">
                     {prevPhase.modules[prevPhase.modules.length - 1].title}
                   </span>
                 </div>
               </Link>
             ) : (
-              <div />
+              <div className="hidden sm:block" />
             )}
           </div>
 
           {/* Next */}
-          <div>
+          <div className="flex-1 sm:flex-initial">
             {nextModule ? (
               <Link
                 href={`/curso/${phaseSlug}/${nextModule.id}`}
-                className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="flex items-center justify-end gap-2 p-3 sm:p-0 rounded-lg sm:rounded-none bg-blue-50 sm:bg-transparent text-blue-600 hover:bg-blue-100 sm:hover:bg-transparent transition-colors"
               >
-                <div className="text-right">
-                  <span className="text-xs text-slate-400 block">Próximo</span>
-                  <span className="text-sm font-medium">{nextModule.title}</span>
+                <div className="text-right min-w-0">
+                  <span className="text-xs text-blue-400 sm:text-slate-400 block">Próximo</span>
+                  <span className="text-sm font-medium truncate block">{nextModule.title}</span>
                 </div>
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 flex-shrink-0" />
               </Link>
             ) : nextPhase ? (
               <Link
                 href={`/curso/${nextPhase.slug}/${nextPhase.modules[0].id}`}
-                className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="flex items-center justify-end gap-2 p-3 sm:p-0 rounded-lg sm:rounded-none bg-blue-50 sm:bg-transparent text-blue-600 hover:bg-blue-100 sm:hover:bg-transparent transition-colors"
               >
-                <div className="text-right">
-                  <span className="text-xs text-slate-400 block">{nextPhase.shortTitle}</span>
-                  <span className="text-sm font-medium">{nextPhase.modules[0].title}</span>
+                <div className="text-right min-w-0">
+                  <span className="text-xs text-blue-400 sm:text-slate-400 block">{nextPhase.shortTitle}</span>
+                  <span className="text-sm font-medium truncate block">{nextPhase.modules[0].title}</span>
                 </div>
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 flex-shrink-0" />
               </Link>
             ) : (
-              <div />
+              <div className="hidden sm:block" />
             )}
           </div>
         </div>

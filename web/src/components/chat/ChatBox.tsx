@@ -113,18 +113,18 @@ export function ChatBox({ phaseId, moduleId, phaseTitle, moduleTitle, contextSum
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all hover:scale-105 z-50"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-105 z-50"
         title="Abrir chat para dúvidas"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-96 h-[500px] bg-white rounded-xl shadow-2xl flex flex-col z-50 border border-slate-200">
+    <div className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 sm:w-96 sm:h-[500px] bg-white sm:rounded-xl shadow-2xl flex flex-col z-50 sm:border border-slate-200">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 bg-blue-600 text-white rounded-t-xl">
+      <div className="flex items-center justify-between px-4 py-3 pt-safe bg-blue-600 text-white sm:rounded-t-xl">
         <div>
           <h3 className="font-semibold text-sm">Dúvidas sobre a aula</h3>
           <p className="text-xs text-blue-100">{moduleTitle}</p>
