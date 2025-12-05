@@ -559,7 +559,7 @@ console.log("E estou funcionando!");'
         </p>
       </InfoBox>
 
-      <h3>Recapitulando a Fase 0</h3>
+      <h3>Recapitulando a Fase 1</h3>
 
       <p>Nesta fase você aprendeu que:</p>
 
@@ -571,9 +571,9 @@ console.log("E estou funcionando!");'
         <li>O <strong>ciclo de trabalho</strong> é: escrever → executar → ver resultado → ajustar</li>
       </ul>
 
-      <InfoBox type="success" title="Fase 0 Completa!">
+      <InfoBox type="success" title="Fase 1 Completa!">
         <p className="mb-0">
-          Você está pronto para a <strong>Fase 1</strong>, onde vai aprender
+          Você está pronto para a <strong>Fase 2</strong>, onde vai aprender
           os fundamentos da lógica de programação: variáveis, condições, repetições e muito mais!
         </p>
       </InfoBox>
