@@ -8,6 +8,12 @@ import { COURSE_PHASES, getPhaseBySlug } from '@/data/course-structure';
 import { useCourseProgress } from '@/hooks/useCourseProgress';
 import { ChatBox } from '@/components/chat/ChatBox';
 import { Fase1Content } from '@/components/course/content/Fase1Content';
+import { Fase2Content } from '@/components/course/content/Fase2Content';
+import { Fase3Content } from '@/components/course/content/Fase3Content';
+import { Fase4Content } from '@/components/course/content/Fase4Content';
+import { Fase5Content } from '@/components/course/content/Fase5Content';
+import { Fase6Content } from '@/components/course/content/Fase6Content';
+import { Fase7Content } from '@/components/course/content/Fase7Content';
 import clsx from 'clsx';
 
 export default function ModulePage() {
@@ -67,6 +73,18 @@ export default function ModulePage() {
     switch (phase.id) {
       case 'fase-1':
         return <Fase1Content moduleId={moduleId} />;
+      case 'fase-2':
+        return <Fase2Content moduleId={moduleId} />;
+      case 'fase-3':
+        return <Fase3Content moduleId={moduleId} />;
+      case 'fase-4':
+        return <Fase4Content moduleId={moduleId} />;
+      case 'fase-5':
+        return <Fase5Content moduleId={moduleId} />;
+      case 'fase-6':
+        return <Fase6Content moduleId={moduleId} />;
+      case 'fase-7':
+        return <Fase7Content moduleId={moduleId} />;
       default:
         return (
           <div className="prose prose-slate max-w-none">
