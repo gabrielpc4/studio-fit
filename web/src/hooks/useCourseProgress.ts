@@ -5,6 +5,11 @@ import { useLocalStorage } from './useLocalStorage';
 import { CourseProgress, ChatMessage, ChatHistory, UserData } from '@/types/course';
 import { COURSE_PHASES } from '@/data/course-structure';
 
+// Gera ID único simples
+function generateId(): string {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
 const STORAGE_KEY = 'studio-fit-course-data';
 
 const defaultProgress: CourseProgress = {
@@ -64,7 +69,7 @@ export function useCourseProgress() {
   const addChatMessage = useCallback((message: Omit<ChatMessage, 'id' | 'timestamp'>) => {
     const newMessage: ChatMessage = {
       ...message,
-      id: crypto.randomUUID(),
+      id: generateId(),
       timestamp: new Date().toISOString(),
     };
     setUserData(prev => ({

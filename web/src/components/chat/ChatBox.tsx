@@ -6,6 +6,11 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import clsx from 'clsx';
 
+// Gera ID único simples
+function generateId(): string {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
 interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
@@ -47,7 +52,7 @@ export function ChatBox({ phaseId, moduleId, phaseTitle, moduleTitle, contextSum
     if (!input.trim() || isLoading) return;
 
     const userMessage: ChatMessage = {
-      id: crypto.randomUUID(),
+      id: generateId(),
       role: 'user',
       content: input.trim(),
     };
@@ -78,7 +83,7 @@ export function ChatBox({ phaseId, moduleId, phaseTitle, moduleTitle, contextSum
       const data = await response.json();
 
       const assistantMessage: ChatMessage = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         role: 'assistant',
         content: data.content,
       };
@@ -87,7 +92,7 @@ export function ChatBox({ phaseId, moduleId, phaseTitle, moduleTitle, contextSum
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
       const errorMessage: ChatMessage = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         role: 'assistant',
         content: 'Desculpe, ocorreu um erro ao processar sua pergunta. Por favor, tente novamente.',
       };
