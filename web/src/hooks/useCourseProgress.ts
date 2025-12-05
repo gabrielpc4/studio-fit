@@ -8,7 +8,7 @@ import { COURSE_PHASES } from '@/data/course-structure';
 const STORAGE_KEY = 'studio-fit-course-data';
 
 const defaultProgress: CourseProgress = {
-  currentPhaseId: 'fase-0',
+  currentPhaseId: 'fase-1',
   currentModuleId: 'intro',
   completedModules: [],
   lastAccessed: new Date().toISOString(),

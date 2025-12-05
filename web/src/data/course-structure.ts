@@ -2,10 +2,10 @@ import { Phase } from '@/types/course';
 
 export const COURSE_PHASES: Phase[] = [
   {
-    id: 'fase-0',
-    slug: 'fase-0',
+    id: 'fase-1',
+    slug: 'fase-1',
     title: 'Fundamentos Mentais',
-    shortTitle: 'Fase 0',
+    shortTitle: 'Fase 1',
     description: 'Entenda como computadores e programas funcionam antes de escrever código.',
     order: 0,
     modules: [
@@ -18,10 +18,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-1',
-    slug: 'fase-1',
+    id: 'fase-2',
+    slug: 'fase-2',
     title: 'Lógica de Programação',
-    shortTitle: 'Fase 1',
+    shortTitle: 'Fase 2',
     description: 'Aprenda os blocos fundamentais da programação com JavaScript.',
     order: 1,
     modules: [
@@ -34,10 +34,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-2-1',
-    slug: 'fase-2-1',
+    id: 'fase-3',
+    slug: 'fase-3',
     title: 'Encontrando e Resolvendo Erros',
-    shortTitle: 'Fase 2.1',
+    shortTitle: 'Fase 3',
     description: 'Aprenda a ler mensagens de erro e debugar código como um profissional.',
     order: 2,
     modules: [
@@ -51,10 +51,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-2-2',
-    slug: 'fase-2-2',
+    id: 'fase-4',
+    slug: 'fase-4',
     title: 'Trabalhando com IA',
-    shortTitle: 'Fase 2.2',
+    shortTitle: 'Fase 4',
     description: 'Aprenda a usar IA como ferramenta de programação de forma eficiente.',
     order: 3,
     modules: [
@@ -69,10 +69,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-2',
-    slug: 'fase-2',
+    id: 'fase-5',
+    slug: 'fase-5',
     title: 'Entendendo Estrutura de Projetos',
-    shortTitle: 'Fase 2',
+    shortTitle: 'Fase 5',
     description: 'Aprenda como projetos reais são organizados e como navegar neles.',
     order: 4,
     modules: [
@@ -86,10 +86,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-3',
-    slug: 'fase-3',
+    id: 'fase-6',
+    slug: 'fase-6',
     title: 'Introdução ao React Native',
-    shortTitle: 'Fase 3',
+    shortTitle: 'Fase 6',
     description: 'Crie interfaces visuais e apps de verdade que rodam no celular.',
     order: 5,
     modules: [
@@ -105,10 +105,10 @@ export const COURSE_PHASES: Phase[] = [
     ]
   },
   {
-    id: 'fase-4',
-    slug: 'fase-4',
+    id: 'fase-7',
+    slug: 'fase-7',
     title: 'Trabalhando com Dados da Internet',
-    shortTitle: 'Fase 4',
+    shortTitle: 'Fase 7',
     description: 'Busque dados de APIs e conecte seu app a backends.',
     order: 6,
     modules: [

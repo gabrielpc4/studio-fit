@@ -11,7 +11,7 @@ import clsx from 'clsx';
 export function Sidebar() {
   const pathname = usePathname();
   const { isModuleComplete, getPhaseProgress } = useCourseProgress();
-  const [expandedPhases, setExpandedPhases] = useState<string[]>(['fase-0']);
+  const [expandedPhases, setExpandedPhases] = useState<string[]>(['fase-1']);
 
   const togglePhase = (phaseId: string) => {
     setExpandedPhases(prev =>

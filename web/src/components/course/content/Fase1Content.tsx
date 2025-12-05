@@ -5,11 +5,11 @@ import { InfoBox } from '../InfoBox';
 import { Quiz } from '../Quiz';
 import { Exercise } from '../Exercise';
 
-interface Fase0ContentProps {
+interface Fase1ContentProps {
   moduleId: string;
 }
 
-export function Fase0Content({ moduleId }: Fase0ContentProps) {
+export function Fase1Content({ moduleId }: Fase1ContentProps) {
   switch (moduleId) {
     case 'intro':
       return <IntroContent />;

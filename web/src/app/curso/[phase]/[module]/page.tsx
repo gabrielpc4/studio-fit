@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation';
 import { COURSE_PHASES, getPhaseBySlug } from '@/data/course-structure';
 import { useCourseProgress } from '@/hooks/useCourseProgress';
 import { ChatBox } from '@/components/chat/ChatBox';
-import { Fase0Content } from '@/components/course/content/Fase0Content';
+import { Fase1Content } from '@/components/course/content/Fase1Content';
 import clsx from 'clsx';
 
 export default function ModulePage() {
@@ -65,8 +65,8 @@ export default function ModulePage() {
   // Render content based on phase
   const renderContent = () => {
     switch (phase.id) {
-      case 'fase-0':
-        return <Fase0Content moduleId={moduleId} />;
+      case 'fase-1':
+        return <Fase1Content moduleId={moduleId} />;
       default:
         return (
           <div className="prose prose-slate max-w-none">
