@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: add interactive course website\n\n- Next.js project with TypeScript and Tailwind CSS\n- Sidebar navigation with all course phases\n- Dynamic module pages with content rendering\n- Chat component with Claude AI integration\n- Local storage for progress persistence\n- Interactive components: Quiz, Exercise, CodeBlock, InfoBox\n- Full Phase 0 content (Fundamentos Mentais)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
